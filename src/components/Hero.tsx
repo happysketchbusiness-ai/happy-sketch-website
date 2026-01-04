@@ -1,20 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { ThreeBackground } from "./ThreeBackground";
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
-          alt="Abstract gradient background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
-      </div>
+      {/* Background 3D Scene */}
+      <ThreeBackground />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background pointer-events-none z-0" />
 
       {/* Content */}
       <div className="relative z-10 container-wide px-4 md:px-8 pt-32 pb-20">
@@ -58,13 +52,13 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button variant="hero" size="xl" asChild>
+            <Button variant="glass-3d" size="xl" asChild>
               <a href="#contact" className="gap-2">
                 Start Your Project
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
-            <Button variant="hero-secondary" size="xl" asChild>
+            <Button variant="glass-3d" size="xl" asChild>
               <a href="#services">Explore Services</a>
             </Button>
           </motion.div>

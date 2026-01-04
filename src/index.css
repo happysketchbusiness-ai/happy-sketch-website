@@ -15,8 +15,8 @@
     --popover: 0 0% 5%;
     --popover-foreground: 210 20% 95%;
 
-    --primary: 120 80% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 190 90% 50%;
+    --primary-foreground: 0 0% 0%; /* Black text on bright cyan */
 
     --secondary: 0 0% 10%;
     --secondary-foreground: 210 20% 90%;
@@ -24,7 +24,7 @@
     --muted: 0 0% 8%;
     --muted-foreground: 215 15% 65%;
 
-    --accent: 250 60% 60%;
+    --accent: 270 95% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,19 +32,19 @@
 
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 215 80% 55%;
+    --ring: 190 90% 50%;
 
     --radius: 1rem;
 
     /* Custom design tokens for Happy Sketch */
     --glass-bg: 0 0% 5%;
     --glass-border: 0 0% 10%;
-    --gradient-start: 120 80% 55%;
-    --gradient-end: 250 60% 60%;
-    --text-gradient-start: 120 80% 50%;
-    --text-gradient-end: 250 60% 55%;
-    --shadow-color: 220 60% 50%;
-    --glow: 120 100% 70%;
+    --gradient-start: 190 90% 50%;
+    --gradient-end: 270 95% 60%;
+    --text-gradient-start: 190 90% 50%;
+    --text-gradient-end: 270 95% 60%;
+    --shadow-color: 270 60% 50%;
+    --glow: 190 100% 70%;
   }
 
   .dark {
@@ -57,8 +57,8 @@
     --popover: 220 25% 12%;
     --popover-foreground: 210 20% 98%;
 
-    --primary: 120 80% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 190 90% 50%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 220 20% 18%;
     --secondary-foreground: 210 20% 98%;
@@ -66,7 +66,7 @@
     --muted: 220 20% 18%;
     --muted-foreground: 215 15% 65%;
 
-    --accent: 250 60% 60%;
+    --accent: 270 95% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -74,7 +74,7 @@
 
     --border: 220 20% 20%;
     --input: 220 20% 20%;
-    --ring: 215 80% 55%;
+    --ring: 190 90% 50%;
 
     --glass-bg: 220 25% 15%;
     --glass-border: 220 20% 25%;

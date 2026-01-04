@@ -19,6 +19,7 @@ const buttonVariants = cva(
         glass: "bg-glass/60 backdrop-blur-xl border border-glass-border/30 text-foreground hover:bg-glass/80 hover:-translate-y-0.5",
         hero: "bg-gradient-to-r from-primary to-accent text-primary-foreground shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02]",
         "hero-secondary": "bg-glass/70 backdrop-blur-xl border border-glass-border/40 text-foreground hover:bg-glass/90 hover:-translate-y-0.5",
+        "glass-3d": "bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:scale-105 hover:border-white/30 transition-all duration-300",
       },
       size: {
         default: "h-11 px-6 py-2",
@@ -37,7 +38,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 

@@ -1,0 +1,21 @@
+{
+    "name": "Happy Sketch",
+    "short_name": "HappySketch",
+    "description": "Premium digital agency specializing in AI automation and creative design.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0d0d0d",
+    "theme_color": "#0d0d0d",
+    "icons": [
+        {
+            "src": "/loko.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/loko.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

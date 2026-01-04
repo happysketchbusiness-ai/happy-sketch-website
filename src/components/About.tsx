@@ -22,16 +22,17 @@ export const About = () => {
               We're <span className="gradient-text">Happy Sketch</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              A premium digital agency at the intersection of creativity and
-              technology. We partner with forward-thinking businesses to create
-              exceptional digital experiences that drive growth and inspire
-              audiences.
+              HappySketch is a creative digital agency built on one simple belief:
+              great ideas deserve great execution.
+              We specialize in turning raw concepts into visually powerful, user-focused,
+              and result-driven digital experiences. From sketch-level ideas to polished digital products,
+              we help brands communicate clearly, creatively, and confidently in the digital world.
             </p>
             <p className="text-muted-foreground mb-8">
-              With expertise in AI automation, innovative design, and strategic
-              digital solutions, we transform complex challenges into elegant,
-              user-centric products. Our team combines technical excellence with
-              creative vision to deliver results that exceed expectations.
+              At Happy Sketch, creativity isn’t just about looking good — it’s about solving problems,
+              telling stories, and driving impact. Every project starts with understanding the client’s vision,
+              audience, and goals. We then combine strategy, design, and technology to craft solutions that are not only beautiful,
+              but also purposeful.
             </p>
             <div className="grid grid-cols-3 gap-8">
               {[
@@ -44,6 +45,7 @@ export const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  className="glass-card p-6 text-center hover-lift"
                 >
                   <div className="text-3xl md:text-4xl font-bold gradient-text">
                     {stat.number}

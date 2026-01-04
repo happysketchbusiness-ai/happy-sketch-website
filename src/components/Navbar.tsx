@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Process", href: "#process" },
   { name: "Why Us", href: "#why-us" },
-  { name: "Testimonials", href: "#testimonials" },
 ];
 
 export const Navbar = () => {
@@ -65,32 +65,11 @@ export const Navbar = () => {
           </div>
 
           {/* Get Started Button */}
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.06 }}
-            whileTap={{ scale: 0.96 }}
-            className="
-              hidden md:flex items-center
-              relative overflow-hidden
-              px-8 py-3
-              text-base font-bold
-              text-white
-              rounded-md
-              bg-gradient-to-r from-green-500 to-purple-400
-              shadow-lg
-            "
-          >
-            <span
-              className="
-                absolute inset-0
-                bg-gradient-to-r from-transparent via-white/30 to-transparent
-                translate-x-[-100%]
-                hover:translate-x-[100%]
-                transition-transform duration-700
-              "
-            />
-            <span className="relative z-10">Get Started</span>
-          </motion.a>
+          <div className="hidden md:flex">
+            <Button variant="glass-3d" size="default" asChild className="rounded-full h-auto py-2 px-6">
+              <a href="#contact">Get Started</a>
+            </Button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button

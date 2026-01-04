@@ -145,7 +145,7 @@ export const Contact = () => {
                 </div>
                 <Button
                   type="submit"
-                  variant="hero"
+                  variant="glass-3d"
                   size="xl"
                   className="w-full"
                   disabled={isSubmitting}
