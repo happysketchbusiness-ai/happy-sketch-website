@@ -5,33 +5,33 @@ import { Shield, Users, Award, Clock, HeartHandshake, Sparkles } from "lucide-re
 const reasons = [
   {
     icon: Shield,
-    title: "Trusted Expertise",
-    description: "8+ years of delivering excellence for global brands and startups alike.",
+    title: "Young Minds",
+    description: "Fresh perspectives from college students bringing innovative ideas to life.",
   },
   {
     icon: Users,
-    title: "Dedicated Team",
-    description: "Expert professionals committed to your success at every stage.",
+    title: "Fresh Perspectives",
+    description: "Young minds bring innovative ideas and modern approaches to every project.",
   },
   {
     icon: Award,
-    title: "Award-Winning Work",
-    description: "Recognized for innovation, creativity, and outstanding results.",
+    title: "Eager to Innovate",
+    description: "Driven by curiosity and enthusiasm to create something amazing.",
   },
   {
     icon: Clock,
-    title: "On-Time Delivery",
-    description: "We respect deadlines and deliver quality without compromise.",
+    title: "Flexible & Dedicated",
+    description: "We adapt quickly and work hard to meet your needs and deadlines.",
   },
   {
     icon: HeartHandshake,
-    title: "True Partnership",
-    description: "We're invested in your success as if it were our own.",
+    title: "Personal Touch",
+    description: "Small team means direct communication and genuine care for your project.",
   },
   {
     icon: Sparkles,
-    title: "Future-Ready",
-    description: "Solutions built with tomorrow's technologies today.",
+    title: "Cost-Effective",
+    description: "Affordable solutions without compromising on quality or creativity.",
   },
 ];
 
@@ -52,27 +52,11 @@ export const WhyUs = () => {
               Why Choose Us
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-              Built Different. <span className="gradient-text">Built Better.</span>
+              Young Minds, <span className="gradient-text">Big Ideas.</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We combine strategic thinking with creative excellence to deliver
-              digital experiences that drive real business results. Here's what
-              sets us apart.
+              We're college students passionate about technology and design. Though we don't have years of experience, we bring fresh energy, quick learning, and innovative thinking to every project.
             </p>
-
-            <div className="glass-card p-6 inline-block">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-xl font-bold text-primary-foreground">98%</span>
-                </div>
-                <div>
-                  <div className="font-semibold">Client Retention Rate</div>
-                  <div className="text-sm text-muted-foreground">
-                    Clients come back for more
-                  </div>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div

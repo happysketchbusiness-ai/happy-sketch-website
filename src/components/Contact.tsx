@@ -13,17 +13,41 @@ export const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
-    });
-    
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = {
+      name: formData.get('from_name'),
+      email: formData.get('from_email'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('https://formspree.io/f/xaqwvdyn', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. We'll get back to you within 24 hours.",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error('Failed to send');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
+
     setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
   };
 
   return (
@@ -48,9 +72,9 @@ export const Contact = () => {
 
             <div className="space-y-6">
               {[
-                { icon: Mail, label: "Email", value: "hello@happysketch.com" },
-                { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-                { icon: MapPin, label: "Location", value: "San Francisco, CA" },
+                { icon: Mail, label: "Email", value: "happysketch.business@gmail.com" },
+                { icon: Phone, label: "Phone", value: "+91 7010826253" },
+                { icon: MapPin, label: "Location", value: "Chennai,Tamil Nadu,IN" },
               ].map((item, index) => (
                 <motion.div
                   key={item.label}
@@ -83,29 +107,17 @@ export const Contact = () => {
                 Request Free Consultation
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                      placeholder="John"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                      placeholder="Doe"
-                    />
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    name="from_name"
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                    placeholder="Your Name"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">
@@ -113,19 +125,10 @@ export const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="from_email"
                     required
                     className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                    placeholder="john@company.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                    placeholder="Your Company"
+                    placeholder="Your Email Address"
                   />
                 </div>
                 <div>
@@ -133,10 +136,11 @@ export const Contact = () => {
                     How can we help?
                   </label>
                   <textarea
+                    name="message"
                     required
                     rows={4}
                     className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-                    placeholder="Tell us about your project..."
+                    placeholder="Tell us about..."
                   />
                 </div>
                 <Button
