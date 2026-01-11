@@ -36,9 +36,7 @@ export const About = () => {
             </p>
             <div className="grid grid-cols-3 gap-8">
               {[
-                { number: "150+", label: "Projects Delivered" },
-                { number: "98%", label: "Client Satisfaction" },
-                { number: "8+", label: "Years Experience" },
+
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
