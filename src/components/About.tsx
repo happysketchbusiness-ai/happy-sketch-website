@@ -34,26 +34,7 @@ export const About = () => {
               audience, and goals. We then combine strategy, design, and technology to craft solutions that are not only beautiful,
               but also purposeful.
             </p>
-            <div className="grid grid-cols-3 gap-8">
-              {[
 
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="glass-card p-6 text-center hover-lift"
-                >
-                  <div className="text-3xl md:text-4xl font-bold gradient-text">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-muted-foreground mt-1">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
 
           <motion.div
